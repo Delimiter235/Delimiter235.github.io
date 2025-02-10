@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Delimiter235</title><link>https://Delimiter235.github.io</link><description>This is where we came from.</description><copyright>Delimiter235</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/Delimiter235/Delimiter235.github.io/refs/heads/main/images/blkcat.png</url><title>avatar</title><link>https://Delimiter235.github.io</link></image><lastBuildDate>Mon, 10 Feb 2025 04:29:48 +0000</lastBuildDate><managingEditor>Delimiter235</managingEditor><ttl>60</ttl><webMaster>Delimiter235</webMaster><item><title>2025-02-09 学习日报</title><link>https://Delimiter235.github.io/post/2025-02-09%20-xue-xi-ri-bao.html</link><description>今日重点
-1. 安装VSCode Vim插件并初步熟悉了部分操作
-2. 掌握Python lambda表达式的高级用法
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Delimiter235</title><link>https://Delimiter235.github.io</link><description>This is where we came from.</description><copyright>Delimiter235</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/Delimiter235/Delimiter235.github.io/refs/heads/main/images/blkcat.png</url><title>avatar</title><link>https://Delimiter235.github.io</link></image><lastBuildDate>Mon, 10 Feb 2025 04:31:21 +0000</lastBuildDate><managingEditor>Delimiter235</managingEditor><ttl>60</ttl><webMaster>Delimiter235</webMaster><item><title>2025-02-09 学习日报</title><link>https://Delimiter235.github.io/post/2025-02-09%20-xue-xi-ri-bao.html</link><description>## 今日重点
+###1. 安装VSCode Vim插件并初步熟悉了部分操作
+###2. 掌握Python lambda表达式的高级用法
 
-学习记录
-1. Vim 初体验
-安装了VSCode Vim扩展（1.29.0）
-
-基础操作练习（参考博客《史上最全Vim快捷键键位图 -- 入门到进阶》）链接：https://cenalulu.github.io/linux/all-vim-cheatsheat/
+##学习记录
+###1. Vim 初体验
+-安装了VSCode Vim扩展（1.29.0）
+-基础操作练习（参考博客《史上最全Vim快捷键键位图 -- 入门到进阶》）链接：https://cenalulu.github.io/linux/all-vim-cheatsheat/
 三种模式： Normal（Esc），Insert（i），移动至行尾Insert（A），Command（：）
 光标移动：左（h），下（j)， 上（k），右（l），移动行尾（$），移动至行软首（^），移动至行硬首（0），移动至下一词首（w），移动至下一词尾（e），移动至前一词首（b）
 删除整行（dd），复制整行（yy），粘贴（p）
