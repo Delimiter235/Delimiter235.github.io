@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Delimiter235</title><link>https://Delimiter235.github.io</link><description>This is where we came from.</description><copyright>Delimiter235</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/Delimiter235/Delimiter235.github.io/refs/heads/main/images/blkcat.png</url><title>avatar</title><link>https://Delimiter235.github.io</link></image><lastBuildDate>Mon, 10 Feb 2025 04:31:43 +0000</lastBuildDate><managingEditor>Delimiter235</managingEditor><ttl>60</ttl><webMaster>Delimiter235</webMaster><item><title>2025-02-09 学习日报</title><link>https://Delimiter235.github.io/post/2025-02-09%20-xue-xi-ri-bao.html</link><description>今日重点
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Delimiter235</title><link>https://Delimiter235.github.io</link><description>This is where we came from.</description><copyright>Delimiter235</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/Delimiter235/Delimiter235.github.io/refs/heads/main/images/blkcat.png</url><title>avatar</title><link>https://Delimiter235.github.io</link></image><lastBuildDate>Mon, 10 Feb 2025 04:32:19 +0000</lastBuildDate><managingEditor>Delimiter235</managingEditor><ttl>60</ttl><webMaster>Delimiter235</webMaster><item><title>2025-02-09 学习日报</title><link>https://Delimiter235.github.io/post/2025-02-09%20-xue-xi-ri-bao.html</link><description>今日重点
 1. 安装VSCode Vim插件并初步熟悉了部分操作
 2. 掌握Python lambda表达式的高级用法
 
@@ -11,6 +11,5 @@
 光标移动：左（h），下（j)， 上（k），右（l），移动行尾（$），移动至行软首（^），移动至行硬首（0），移动至下一词首（w），移动至下一词尾（e），移动至前一词首（b）
 删除整行（dd），复制整行（yy），粘贴（p）
 从后向前backspace（x），从前向后backspace（X）
- 
-首次练习遇到的问题：
+ 首次练习遇到的问题：
 Insert模式与Normal模式中光标移动方向键与hjkl混用，部分记住的键位还不能熟练运用，推测可能的原因为首次使用不习惯，建议多加练习与实战。</description><guid isPermaLink="true">https://Delimiter235.github.io/post/2025-02-09%20-xue-xi-ri-bao.html</guid><pubDate>Sun, 09 Feb 2025 17:47:57 +0000</pubDate></item><item><title>Blog Test</title><link>https://Delimiter235.github.io/post/Blog%20Test.html</link><description>Hello, world.。</description><guid isPermaLink="true">https://Delimiter235.github.io/post/Blog%20Test.html</guid><pubDate>Sun, 09 Feb 2025 10:38:43 +0000</pubDate></item></channel></rss>

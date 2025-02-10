@@ -22,8 +22,7 @@
 光标移动：左（h），下（j)， 上（k），右（l），移动行尾（$），移动至行软首（^），移动至行硬首（0），移动至下一词首（w），移动至下一词尾（e），移动至前一词首（b）
 删除整行（dd），复制整行（yy），粘贴（p）
 从后向前backspace（x），从前向后backspace（X）
- 
-首次练习遇到的问题：
+ 首次练习遇到的问题：
 Insert模式与Normal模式中光标移动方向键与hjkl混用，部分记住的键位还不能熟练运用，推测可能的原因为首次使用不习惯，建议多加练习与实战。">
 <meta property="og:title" content="2025-02-09 学习日报">
 <meta property="og:description" content="今日重点
@@ -38,8 +37,7 @@ Insert模式与Normal模式中光标移动方向键与hjkl混用，部分记住�
 光标移动：左（h），下（j)， 上（k），右（l），移动行尾（$），移动至行软首（^），移动至行硬首（0），移动至下一词首（w），移动至下一词尾（e），移动至前一词首（b）
 删除整行（dd），复制整行（yy），粘贴（p）
 从后向前backspace（x），从前向后backspace（X）
- 
-首次练习遇到的问题：
+ 首次练习遇到的问题：
 Insert模式与Normal模式中光标移动方向键与hjkl混用，部分记住的键位还不能熟练运用，推测可能的原因为首次使用不习惯，建议多加练习与实战。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Delimiter235.github.io/post/2025-02-09%20-xue-xi-ri-bao.html">
@@ -108,24 +106,26 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </ol>
 <p>学习记录</p>
 <ol>
-<li>Vim 初体验<br>
+<li>
+<p>Vim 初体验<br>
 安装了VSCode Vim扩展（1.29.0）<br>
 基础操作练习（参考博客《史上最全Vim快捷键键位图 -- 入门到进阶》）链接：<a href="https://cenalulu.github.io/linux/all-vim-cheatsheat/" rel="nofollow">https://cenalulu.github.io/linux/all-vim-cheatsheat/</a><br>
 三种模式： Normal（Esc），Insert（i），移动至行尾Insert（A），Command（：）<br>
 光标移动：左（h），下（j)， 上（k），右（l），移动行尾（$），移动至行软首（^），移动至行硬首（0），移动至下一词首（w），移动至下一词尾（e），移动至前一词首（b）<br>
 删除整行（dd），复制整行（yy），粘贴（p）<br>
-从后向前backspace（x），从前向后backspace（X）</li>
-</ol>
-<p>首次练习遇到的问题：<br>
+从后向前backspace（x），从前向后backspace（X）<br>
+首次练习遇到的问题：<br>
 Insert模式与Normal模式中光标移动方向键与hjkl混用，部分记住的键位还不能熟练运用，推测可能的原因为首次使用不习惯，建议多加练习与实战。</p>
-<ol start="2">
-<li>掌握匿名函数的用法<br>
-复习了CS 61A中week3第一部分Functional Abstraction的第一个视频</li>
-</ol>
-<p>对lambda表达式的理解：<br>
+</li>
+<li>
+<p>掌握匿名函数的用法<br>
+复习了CS 61A中week3第一部分Functional Abstraction的第一个视频<br>
+对lambda表达式的理解：<br>
 简单的函数形式，简单例子”lambda y: 1 + y“（现仅仅是函数对象），分号后个人理解为返回值。加上输入后”(lambda y: 1+ y)(1)“，可以返回”2“。<br>
 匿名函数也可以被命名——“a = lambda y: 1 + y”或“def a(y): return 1 + y”。此时可以调用函数a——“a(1)” ，同样返回“2”。<br>
-最后为复合匿名表达式“(lambda x: 2 * (lambda y: 1 + y)(x))(1)”（返回“４”），个人理解为，想有返回，那么最外层函数必须得传入参数，另外频繁的使用不必要的匿名表达式可能使得代码维护变得麻烦（理解困难）。</p></div>
+最后为复合匿名表达式“(lambda x: 2 * (lambda y: 1 + y)(x))(1)”（返回“４”），个人理解为，想有返回，那么最外层函数必须得传入参数，另外频繁的使用不必要的匿名表达式可能使得代码维护变得麻烦（理解困难）。</p>
+</li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
