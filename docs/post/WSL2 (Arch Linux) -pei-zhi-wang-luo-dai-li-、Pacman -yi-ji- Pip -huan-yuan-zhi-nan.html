@@ -10,16 +10,10 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="# 在 WSL（Arch Linux）上配置网络代理
-
-
-## 现象
+<meta name="description" content="# 现象
 前些天为了在 WSL 上科学上网（在未来可以clone项目或爬取网站信息），我决定在 VM 中启用了全局代理，这致使后续几天内使用 `pacman` 和 `pip` 国内源下载包时出现高延迟和丢包的现象。">
 <meta property="og:title" content="WSL2 (Arch Linux) 配置网络代理、Pacman 以及 Pip 换源指南">
-<meta property="og:description" content="# 在 WSL（Arch Linux）上配置网络代理
-
-
-## 现象
+<meta property="og:description" content="# 现象
 前些天为了在 WSL 上科学上网（在未来可以clone项目或爬取网站信息），我决定在 VM 中启用了全局代理，这致使后续几天内使用 `pacman` 和 `pip` 国内源下载包时出现高延迟和丢包的现象。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Delimiter235.github.io/post/WSL2%20%28Arch%20Linux%29%20-pei-zhi-wang-luo-dai-li-%E3%80%81Pacman%20-yi-ji-%20Pip%20-huan-yuan-zhi-nan.html">
@@ -91,32 +85,31 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h1>在 WSL（Arch Linux）上配置网络代理</h1>
-<h2>现象</h2>
+<div class="markdown-body" id="postBody"><h1>现象</h1>
 <p>前些天为了在 WSL 上科学上网（在未来可以clone项目或爬取网站信息），我决定在 VM 中启用了全局代理，这致使后续几天内使用 <code class="notranslate">pacman</code> 和 <code class="notranslate">pip</code> 国内源下载包时出现高延迟和丢包的现象。即使换用了国外源，因为地理位置的缘故，我依然需要顶着较高的延迟下载。本着“头痛砍头”的思想，我选择抛弃“clone项目”和“爬取信息”的虚空需求，转向了直接采用流量直连和国内源的方式满足最迫切的需求：包的下载。</p>
 <div align="center">
 <p><strong>Linux代理配置中最经典的矛盾“全局代理环境变量”与“国内镜像加速”之间的冲突。</strong>—— Gemini 3.0</p>
 </div>
-<h2>解决方案</h2>
+<h1>解决方案</h1>
 <p>我决定采用以下方案进行配置：创建 <code class="notranslate">.proxy</code> 脚本文件并使用自定义函数 <code class="notranslate">setproxy</code> 和 <code class="notranslate">unsetproxy</code> 进行控制。如图：</p>
 <div align="center">
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/wsl_agent_set.png?raw=true"><img src="https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/wsl_agent_set.png?raw=true" alt="flow chat of how to set net work agent in wsl arch linux" style="max-width: 100%;"></a></p>
 </div>
-<h2>具体方式</h2>
-<h3>准备阶段：确认WSL网络连接模式</h3>
+<h1>具体步骤</h1>
+<h2>准备阶段：确认WSL网络连接模式</h2>
 <p>VM 的网络模式有三种，即 <strong>NAT模式、桥接模式（Bridge）和仅主机模式（Host-only）</strong> ，这三种模式的区别可以看这篇博客短文了解<a href="https://hackmd.io/@yzai/H1GmIiqV9" rel="nofollow"><em>虛擬機的網路模式(Host-only,Bridged,NAT)</em></a>。 <strong>默认情况下，WSL使用基于NAT的体系结构</strong> ，详见<a href="https://learn.microsoft.com/zh-cn/windows/wsl/networking" rel="nofollow"><em>使用 WSL 访问网络应用程序</em></a>。</p>
 <p>由于并没有修改默认的网络模式，我可以顺理成章的开始正式进行配置工作。如果不放心的话，可以通过在 CMD 和 PowerShell 输入 <code class="notranslate">ipconfig</code> 命令检查主系统的 <code class="notranslate">IPv4</code> 和 <code class="notranslate">子网掩码</code>，同时通过在 WSL 中通过在 Shell 中输入 <code class="notranslate">ip addr</code> 来检查 VM 的 <code class="notranslate">inet</code> 。</p>
-<h3>第一步</h3>
+<h2>第一步</h2>
 <p>网络代理工具开启“允许局域网代理”（Allow LAN），如果不开启此设置，其将只侦听 <code class="notranslate">127.0.0.1</code> 。</p>
 <div align="center">
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/app_shot_edit1.jpg?raw=true"><img src="https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/app_shot_edit1.jpg?raw=true" alt="flow chat of how to set net work agent in wsl arch linux" style="max-width: 100%;"></a></p>
 </div>
-<h3>第二步</h3>
+<h2>第二步</h2>
 <p>允许 <code class="notranslate">适用于Linux的Windows子系统</code> 通过 Windows Defender 防火墙进行通讯。</p>
 <div align="center">
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/app_shot_edit2.png?raw=true"><img src="https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/app_shot_edit2.png?raw=true" alt="flow chat of how to set net work agent in wsl arch linux" style="max-width: 100%;"></a></p>
 </div>
-<h3>第三步</h3>
+<h2>第三步</h2>
 <p>在 VM 家目录下创建并编辑配置文件 <code class="notranslate">.proxy</code>。</p>
 <pre class="notranslate"><code class="notranslate">nano ~/.proxy
 </code></pre>
@@ -144,7 +137,7 @@ unsetproxy() {
 }
 </code></pre>
 <p>然后根据流程图，添加 <code class="notranslate">unsetproxy</code> 至文件末尾以在启动 WSL 时保持代理关闭。最后在文件头部添加 <code class="notranslate">#!/bin/bash</code> 以声明脚本解释器并启用语法高亮，编辑完成后在 <code class="notranslate">.bashrc</code> 文件中添加 <code class="notranslate">source ~/.proxy</code> 即可在进入 WSL 系统后，输入 <code class="notranslate">setproxy</code> 就可以开启代理，输入 <code class="notranslate">unsetproxy</code> 以关闭代理。</p>
-<h3>第四步</h3>
+<h2>第四步</h2>
 <p>分别配置 Pacman 和 Pip 的镜像源。<br>
 首先输入以下命令以编辑 Pacman 镜像源。</p>
 <pre class="notranslate"><code class="notranslate">sudo nano /etc/pacman.d/mirrorlist
@@ -162,7 +155,7 @@ unsetproxy() {
 <pre class="notranslate"><code class="notranslate">[global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 </code></pre>
-<h3>测试</h3>
+<h2>测试</h2>
 <p>在输入 <code class="notranslate">setproxy</code> 命令后可以尝试克隆一个 GitHub 仓库，在输入 <code class="notranslate">unsetproxy</code> 命令后享受国内源带来的高速下载的快乐，你懂的XD。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
