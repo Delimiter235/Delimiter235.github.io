@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Delimiter235</title><link>https://Delimiter235.github.io</link><description>This is where we came from.</description><copyright>Delimiter235</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/Delimiter235/Delimiter235.github.io/refs/heads/main/images/blkcat.png</url><title>avatar</title><link>https://Delimiter235.github.io</link></image><lastBuildDate>Wed, 17 Dec 2025 03:31:05 +0000</lastBuildDate><managingEditor>Delimiter235</managingEditor><ttl>60</ttl><webMaster>Delimiter235</webMaster><item><title>WSL2 (Arch Linux) 配置网络代理、Pacman 以及 Pip 换源指南</title><link>https://Delimiter235.github.io/post/WSL2%20%28Arch%20Linux%29%20-pei-zhi-wang-luo-dai-li-%E3%80%81Pacman%20-yi-ji-%20Pip%20-huan-yuan-zhi-nan.html</link><description># 现象
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Delimiter235</title><link>https://Delimiter235.github.io</link><description>This is where we came from.</description><copyright>Delimiter235</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/Delimiter235/Delimiter235.github.io/refs/heads/main/images/blkcat.png</url><title>avatar</title><link>https://Delimiter235.github.io</link></image><lastBuildDate>Wed, 17 Dec 2025 07:55:15 +0000</lastBuildDate><managingEditor>Delimiter235</managingEditor><ttl>60</ttl><webMaster>Delimiter235</webMaster><item><title>WSL2 (Arch Linux) 配置网络代理、Pacman 以及 Pip 换源指南</title><link>https://Delimiter235.github.io/post/WSL2%20%28Arch%20Linux%29%20-pei-zhi-wang-luo-dai-li-%E3%80%81Pacman%20-yi-ji-%20Pip%20-huan-yuan-zhi-nan.html</link><description># 现象
 前些天为了在 WSL 上科学上网（在未来可以clone项目或爬取网站信息），我决定在 VM 中启用了全局代理，这致使后续几天内使用 `pacman` 和 `pip` 国内源下载包时出现高延迟和丢包的现象。</description><guid isPermaLink="true">https://Delimiter235.github.io/post/WSL2%20%28Arch%20Linux%29%20-pei-zhi-wang-luo-dai-li-%E3%80%81Pacman%20-yi-ji-%20Pip%20-huan-yuan-zhi-nan.html</guid><pubDate>Tue, 16 Dec 2025 05:43:43 +0000</pubDate></item><item><title>【补】2025-6-18 随便聊聊</title><link>https://Delimiter235.github.io/post/%E3%80%90-bu-%E3%80%912025-6-18%20-sui-bian-liao-liao.html</link><description>今天我第一次浅显地理解了一些符号学的知识，起因是本人半夜在罗森觅食时看了一期刘老师的视频。</description><guid isPermaLink="true">https://Delimiter235.github.io/post/%E3%80%90-bu-%E3%80%912025-6-18%20-sui-bian-liao-liao.html</guid><pubDate>Fri, 25 Jul 2025 15:35:03 +0000</pubDate></item><item><title>2025-02-16 &amp; 17 学习日报</title><link>https://Delimiter235.github.io/post/2025-02-16%20%26%2017%20-xue-xi-ri-bao.html</link><description>重点
 1. 完成了CS61A第二周全部内容的复习
 2. 完成了新的CS61A内容：The Game of Hog
@@ -18,8 +18,8 @@
 学习记录
 1. CS61A内容复习
 由于昨日对第三周Functional Abstraction内容感到有些力不从心，遂返回复习第一二周的内容。</description><guid isPermaLink="true">https://Delimiter235.github.io/post/2025-02-12%20-xue-xi-ri-bao.html</guid><pubDate>Wed, 12 Feb 2025 16:12:00 +0000</pubDate></item><item><title>2025-02-09 学习日报</title><link>https://Delimiter235.github.io/post/2025-02-09%20-xue-xi-ri-bao.html</link><description># 今日重点
-1. 安装VSCode Vim插件并初步熟悉了部分操作
-2. 掌握Python lambda表达式的高级用法
+1. 安装 VSCode 中的 Vim 插件并初步熟悉了部分操作
+2. 掌握 Python 中 lambda 表达式的高级用法
 
 # 学习记录
 ## Vim 初体验
