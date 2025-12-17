@@ -8,7 +8,7 @@
 </div>
 
 # 解决方案
-我决定采用以下方案进行配置：创建 `.proxy` 脚本文件并使用自定义函数 `setproxy` 和 `unsetproxy` 进行控制。如图：
+为什么不能两手抓呢——在高速获取包的同时也能科学上网。为此，我决定采用以下方案进行配置：创建 `.proxy` 脚本文件并使用自定义函数 `setproxy` 和 `unsetproxy` 进行控制。如图：
 
 <div align="center">
 
