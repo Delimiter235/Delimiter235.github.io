@@ -28,18 +28,12 @@ conda env list
 
 <br> 采用 `pyenv` 库可以有效隔离系统环境与项目环境的 Python 版本，在使用命令 `pyenv versions` 后可以清晰地看到系统与其他安装的 Python 版本，其中 `*` 所在行代表了当前是使用系统版本，还是其他 Python 版本（以下输出显示当前属于系统版本）。
 ```
-* system (set by /home/username/.pyenv/version)
-  3.10.13
+* system (set by PYENV_VERSION environment variable)
   3.13.7
+  3.13.7/envs/myproject
+  myproject --> /home/username/.pyenv/versions/3.13.7/envs/myproject
 ```
-如果切换至其他版本则输出：
-```
-  system
-* 3.10.13 (set by PYENV_VERSION environment variable)
-  3.13.7
-```
-至于具体的项目环境的切换和查看，则参考 `virtualenvwrapper` 包中的 `workon` 命令（该包的信息详见 [*virtualenvwrapper官方文档*](https://virtualenvwrapper.readthedocs.io/en/latest/)），在 Shell 脚本文件中添加自定义的 `workon` 函数来解决即可，这里不多赘述。
-
+至于具体的项目环境的切换和查看，则参考  [*pyenv virtualenv插件文档*](https://github.com/pyenv/pyenv-virtualenv)。
 # 具体步骤
 核心步骤，代码块，配置文件的修改。
 ```
