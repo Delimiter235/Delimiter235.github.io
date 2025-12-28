@@ -11,22 +11,10 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="# 现象
-
-
-# 解决方案
-为什么要解决这个问题？这个工具好在哪里？
-
-# 具体步骤
-核心步骤，代码块，配置文件的修改。">
+以前使用 WSL Debian 的时候，习惯使用 Anaconda 对版本进行管理。">
 <meta property="og:title" content="基于WSL2（Arch Linux）的 Python 版本与环境管理指南">
 <meta property="og:description" content="# 现象
-
-
-# 解决方案
-为什么要解决这个问题？这个工具好在哪里？
-
-# 具体步骤
-核心步骤，代码块，配置文件的修改。">
+以前使用 WSL Debian 的时候，习惯使用 Anaconda 对版本进行管理。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Delimiter235.github.io/post/ji-yu-WSL2%EF%BC%88Arch%20Linux%EF%BC%89-de-%20Python%20-ban-ben-yu-huan-jing-guan-li-zhi-nan.html">
 <meta property="og:image" content="https://raw.githubusercontent.com/Delimiter235/Delimiter235.github.io/refs/heads/main/images/blkcat.png">
@@ -98,6 +86,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><h1>现象</h1>
+<p>以前使用 WSL Debian 的时候，习惯使用 Anaconda 对版本进行管理。然而，加上 Debian 自带的 <code class="notranslate">apt</code> 用于包管理，<code class="notranslate">conda</code> 和 <code class="notranslate">pip</code> 同时作为 Python 的包管理器，造成了一定程度上多重嵌套和混乱（具体情况详见下图）。</p>
+<div align="center">
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/wsl_debian_pack_manage.png?raw=true"><img src="https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/wsl_debian_pack_manage.png?raw=true" alt="flow chat of package management in debian linux" style="max-width: 100%;"></a></p>
+</div>
+<p>经过之前一年的使用，我认为如果单独使用 Anaconda 作为环境管理器来说还是不错的，因为其创建环境时包括了设定开发所使用的 Python 版本，创建虚拟环境命令如下：</p>
+<pre class="notranslate"><code class="notranslate">conda create -n envname python=3.4
+</code></pre>
+<p>查看环境也非常地方便。</p>
+<pre class="notranslate"><code class="notranslate">conda env list
+</code></pre>
+<p>此外，具体的其他指令详见 <a href="https://docs.conda.io/projects/conda/en/latest/user-guide" rel="nofollow"><em>Conda用户指导手册</em></a> 。但是说回问题本身，正如流程图中所示，<strong>Anaconda Repository 和 Conda-forge 等 Conda 频道远没有 PyPI 齐全，</strong> 这是使用过程中的一大硬伤，下载不到的库还需要去 PyPI 补齐。也就是说，仅仅将 Anaconda 作为一个包管理器使用的话，就显得有些冗余了。</p>
 <h1>解决方案</h1>
 <p>为什么要解决这个问题？这个工具好在哪里？</p>
 <h1>具体步骤</h1>
