@@ -35,7 +35,33 @@ conda env list
 ```
 至于具体的项目环境的切换和查看，则参考  [*pyenv virtualenv插件文档*](https://github.com/pyenv/pyenv-virtualenv)。
 # 具体步骤
-核心步骤，代码块，配置文件的修改。
+详情参考 [*在 Linux 系统中安装和使用 pyenv：轻松管理多版本 Python*](https://geek-blogs.com/blog/install-pyenv-linux/) 。
+## 第一步：安装依赖包
+以下是在 Arch Linux 中的依赖包安装指令。
 ```
-code block 1
+sudo pacman -S --needed base-devel openssl zlib xz git
 ```
+## 第二步：克隆 pyenv 仓库
+```
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+```
+## 第三步：配置环境变量
+对于 bash 用户来说，可以通过 `echo` 或手动编辑 `.bashrc` 文件添加以下内容来配置环境变量：
+```
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+```
+## 第四步：验证
+通过查看版本以验证安装是否成功。
+```
+pyenv --version
+```
+## 第五步：安装指定 Python 版本
+使用 `pyenv install --list` 命令查看所有可安装的 Python 版本，使用以下命令安装特定版本（以下显示安装版本为 3.13.7 ）：
+```
+pyenv install 3.13.7
+```
+使用 `pyenv versions` 命令即可检查版本，输出如 **解决方案** 中所示。
+## 第六步：安装并配置 pyenv-virtualenv 插件
+配合插件 pyenv-virtualenv 的操作在 *在 Linux 系统中安装和使用 pyenv：轻松管理多版本 Python* 的 [常见实践](https://geek-blogs.com/blog/install-pyenv-linux/#6-chang2-jian4-shi2-jian4) 中已经交代的非常细致，这里不多赘述，照抄即可。

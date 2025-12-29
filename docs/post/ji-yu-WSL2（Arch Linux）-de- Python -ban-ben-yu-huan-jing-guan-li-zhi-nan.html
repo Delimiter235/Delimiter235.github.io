@@ -110,9 +110,31 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </code></pre>
 <p>至于具体的项目环境的切换和查看，则参考  <a href="https://github.com/pyenv/pyenv-virtualenv"><em>pyenv virtualenv插件文档</em></a>。</p>
 <h1>具体步骤</h1>
-<p>核心步骤，代码块，配置文件的修改。</p>
-<pre class="notranslate"><code class="notranslate">code block 1
-</code></pre></div>
+<p>详情参考 <a href="https://geek-blogs.com/blog/install-pyenv-linux/" rel="nofollow"><em>在 Linux 系统中安装和使用 pyenv：轻松管理多版本 Python</em></a> 。</p>
+<h2>第一步：安装依赖包</h2>
+<p>以下是在 Arch Linux 中的依赖包安装指令。</p>
+<pre class="notranslate"><code class="notranslate">sudo pacman -S --needed base-devel openssl zlib xz git
+</code></pre>
+<h2>第二步：克隆 pyenv 仓库</h2>
+<pre class="notranslate"><code class="notranslate">git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+</code></pre>
+<h2>第三步：配置环境变量</h2>
+<p>对于 bash 用户来说，可以通过 <code class="notranslate">echo</code> 或手动编辑 <code class="notranslate">.bashrc</code> 文件添加以下内容来配置环境变量：</p>
+<pre class="notranslate"><code class="notranslate">export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+</code></pre>
+<h2>第四步：验证</h2>
+<p>通过查看版本以验证安装是否成功。</p>
+<pre class="notranslate"><code class="notranslate">pyenv --version
+</code></pre>
+<h2>第五步：安装指定 Python 版本</h2>
+<p>使用 <code class="notranslate">pyenv install --list</code> 命令查看所有可安装的 Python 版本，使用以下命令安装特定版本（以下显示安装版本为 3.13.7 ）：</p>
+<pre class="notranslate"><code class="notranslate">pyenv install 3.13.7
+</code></pre>
+<p>使用 <code class="notranslate">pyenv versions</code> 命令即可检查版本，输出如 <strong>解决方案</strong> 中所示。</p>
+<h2>第六步：安装并配置 pyenv-virtualenv 插件</h2>
+<p>配合插件 pyenv-virtualenv 的操作在 <em>在 Linux 系统中安装和使用 pyenv：轻松管理多版本 Python</em> 的 <a href="https://geek-blogs.com/blog/install-pyenv-linux/#6-chang2-jian4-shi2-jian4" rel="nofollow">常见实践</a> 中已经交代的非常细致，这里不多赘述，照抄即可。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
