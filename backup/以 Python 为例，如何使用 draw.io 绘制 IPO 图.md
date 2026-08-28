@@ -12,13 +12,12 @@ IPO 图，全称 Input-Process-Output 图，即”输入-处理-输出“图，�
 
 ## 各个模块以及说明
 各个模块如图 1.1 图例部分所示，IO 图主体部分则是基于最近需要被优化的项目内容。
-```
 <div align="center">
 
-![flow chat of how to set net work agent in wsl arch linux](https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/app_shot_edit1.jpg?raw=true)
-
+![ipo chart](https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/case_report_analysis_structure_v1.drawio.png?raw=true)
+图 1.1 OCR 表格结构化解析管道系统 IO 图
 </div>
-```
+
 ### 1. 外部依赖（External Dependencies）
 白色矩形容器，系统所依赖的外部标准库（主体部分显示为json、pathlib.Path），直观呈现了系统的物理 I/O 边界。
 ### 2. 模块文件（Files）
