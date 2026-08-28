@@ -18,13 +18,8 @@ IPO 图，全称 Input-Process-Output 图，即”输入-处理-输出“图，�
 图 1.1 OCR 表格结构化解析管道系统 IO 图
 </div>
 
-### 1. 外部依赖（External Dependencies）
-白色矩形容器，系统所依赖的外部标准库（主体部分显示为json、pathlib.Path），直观呈现了系统的物理 I/O 边界。
-### 2. 模块文件（Files）
-有黄色顶栏的容器，物理文件的边界容器（如 common.py、header_processor.py 等），用以界定代码的组织单元。
-### 3. 处理函数（Functions）
-有蓝色顶栏的容器，是具体的业务执行单元，包含完整的 input 参数类型与 output 返回值类型契约。
-### 4. 闲置/待重构函数（Unused Functions）
-有红色高亮顶栏的容器，标识出当前尚未被下游引用的孤立节点（如 get_average_wideness），方便在重构时进行死代码清理或接入。
-### 5. 调用边（Function Call / Invokes）
-黑色以及蓝色箭头：同文件以及跨文件调用，体现单文件内部的自顶向下调用链和文件之间函数的调用关系，颜色不同仅为视觉区分。
+1. 外部依赖（External Dependencies）：白色矩形容器，系统所依赖的外部标准库（主体部分显示为json、pathlib.Path），直观呈现了系统的物理 I/O 边界。
+2. 模块文件（Files）：有黄色顶栏的容器，物理文件的边界容器（如 common.py、header_processor.py 等），用以界定代码的组织单元。
+3. 处理函数（Functions）：有蓝色顶栏的容器，是具体的业务执行单元，包含完整的 input 参数类型与 output 返回值类型契约。
+4. 闲置/待重构函数（Unused Functions）：有红色高亮顶栏的容器，标识出当前尚未被下游引用的孤立节点（如 get_average_wideness），方便在重构时进行死代码清理或接入。
+5. 调用边（Function Call / Invokes）：黑色以及蓝色箭头：同文件以及跨文件调用，体现单文件内部的自顶向下调用链和文件之间函数的调用关系，颜色不同仅为视觉区分。
