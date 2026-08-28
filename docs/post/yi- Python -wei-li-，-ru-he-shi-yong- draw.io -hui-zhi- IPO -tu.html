@@ -87,16 +87,21 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>与此同时，为避免图像过于复杂，本次暂未引入全量数据流图（DFD），而是聚焦于函数调用图（Call Graph / Invocation Diagram）。这种视角能够最直观地暴露函数间的上下游调用拓扑、跨模块调用关系以及潜在的冗余代码，为后续将面向过程脚本重构为高内聚（如磁盘读写与计算业务分离）、低耦合（模块间传递简单数据）的模块化系统奠定基础。</p>
 <h1>各个模块以及说明</h1>
 <p>各个模块如图 1.1 图例部分所示，IO 图主体部分则是基于最近需要被优化的项目内容。</p>
-<h2>外部依赖（External Dependencies）</h2>
-<p>白色矩形容器，系统所依赖的外部标准库（主体部分显示为json、pathlib.Path），直观呈现了系统的物理 I/O 边界。</p>
-<h2>模块文件（Files）</h2>
-<p>有黄色顶栏的容器，物理文件的边界容器（如 common.py、header_processor.py 等），用以界定代码的组织单元。</p>
-<h2>处理函数（Functions）</h2>
-<p>有蓝色顶栏的容器，是具体的业务执行单元，包含完整的 input 参数类型与 output 返回值类型契约。</p>
-<h2>闲置/待重构函数（Unused Functions）</h2>
-<p>有红色高亮顶栏的容器，标识出当前尚未被下游引用的孤立节点（如 get_average_wideness），方便在重构时进行死代码清理或接入。</p>
-<h2>调用边（Function Call / Invokes）</h2>
-<p>黑色以及蓝色箭头：同文件以及跨文件调用，体现单文件内部的自顶向下调用链和文件之间函数的调用关系，颜色不同仅为视觉区分。</p></div>
+<div align="center">
+```
+![flow chat of how to set net work agent in wsl arch linux](https://github.com/Delimiter235/Delimiter235.github.io/blob/main/images/wsl_blog/app_shot_edit1.jpg?raw=true)
+```
+</div>
+## 外部依赖（External Dependencies）
+白色矩形容器，系统所依赖的外部标准库（主体部分显示为json、pathlib.Path），直观呈现了系统的物理 I/O 边界。
+## 模块文件（Files）
+有黄色顶栏的容器，物理文件的边界容器（如 common.py、header_processor.py 等），用以界定代码的组织单元。
+## 处理函数（Functions）
+有蓝色顶栏的容器，是具体的业务执行单元，包含完整的 input 参数类型与 output 返回值类型契约。
+## 闲置/待重构函数（Unused Functions）
+有红色高亮顶栏的容器，标识出当前尚未被下游引用的孤立节点（如 get_average_wideness），方便在重构时进行死代码清理或接入。
+## 调用边（Function Call / Invokes）
+黑色以及蓝色箭头：同文件以及跨文件调用，体现单文件内部的自顶向下调用链和文件之间函数的调用关系，颜色不同仅为视觉区分。</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
